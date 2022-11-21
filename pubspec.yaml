@@ -70,7 +70,7 @@ dependencies:
   auto_size_text: ^3.0.0
   reactive_forms: ^14.1.0
   styled_text: ^6.0.0
-  material_design_icons_flutter: ^5.0.6996
+  material_design_icons_flutter: ^6.0.7096
   slang: ^3.3.1
   universal_platform: ^1.0.0+1
   internet_connection_checker_plus: ^1.0.1
