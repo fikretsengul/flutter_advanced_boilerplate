@@ -99,7 +99,7 @@ dev_dependencies:
   json_serializable: ^6.5.4
   artemis: ^7.9.0-beta
   dart_code_metrics: ^4.19.2
-  golden_toolkit: ^0.13.0
+  golden_toolkit: ^0.14.0
   bloc_test: ^9.1.0
   mocktail: ^0.3.0
   mocktail_image_network: ^0.3.1
