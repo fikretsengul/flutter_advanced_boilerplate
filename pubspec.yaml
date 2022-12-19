@@ -48,7 +48,7 @@ dependencies:
   data_channel: ^2.0.0+1
   sentry_flutter: ^6.13.1
   sentry_dart_plugin: ^1.0.0-beta.4
-  flutter_secure_storage: ^6.0.0
+  flutter_secure_storage: ^7.0.1
   flutter_native_splash: ^2.2.13
   statsfl: ^2.3.0
   pretty_dio_logger: ^1.2.0-beta-1
