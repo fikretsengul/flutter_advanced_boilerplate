@@ -62,7 +62,7 @@ dependencies:
   http: ^0.13.5
   infinite_scroll_pagination: ^3.2.0
   flutter_displaymode: ^0.4.0
-  flutter_staggered_grid_view: ^0.6.2
+  flutter_staggered_grid_view: ^0.7.0
   custom_sliding_segmented_control: ^1.7.3
   url_launcher: ^6.1.6
   spring_button: ^2.0.0
