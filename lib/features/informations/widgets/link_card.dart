@@ -28,14 +28,15 @@ class LinkCard extends StatelessWidget {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(24)),
         ),
-        trailing: const Icon(MdiIcons.link),
+        trailing: Icon(MdiIcons.link),
         title: Row(
           children: [
             Icon(icon),
             const SizedBox(width: 16),
             Text(
               title,
-              style: getTextTheme(context).titleMedium!.apply(fontWeightDelta: 2),
+              style:
+                  getTextTheme(context).titleMedium!.apply(fontWeightDelta: 2),
             ),
           ],
         ),
@@ -43,6 +44,7 @@ class LinkCard extends StatelessWidget {
     );
   }
 
-  Future<bool> _launchUrl() async =>
-      await canLaunchUrl(url) ? await launchUrl(url) : throw Exception('Could not launch $url');
+  Future<bool> _launchUrl() async => await canLaunchUrl(url)
+      ? await launchUrl(url)
+      : throw Exception('Could not launch $url');
 }

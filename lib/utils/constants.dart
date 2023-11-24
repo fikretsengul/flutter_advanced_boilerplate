@@ -67,13 +67,22 @@ class _Insets {
 @immutable
 class _Shadows {
   final textSoft = [
-    Shadow(color: Colors.black.withOpacity(0.25), offset: const Offset(0, 2), blurRadius: 4),
+    Shadow(
+        color: Colors.black.withOpacity(0.25),
+        offset: const Offset(0, 2),
+        blurRadius: 4),
   ];
   final text = [
-    Shadow(color: Colors.black.withOpacity(0.6), offset: const Offset(0, 2), blurRadius: 2),
+    Shadow(
+        color: Colors.black.withOpacity(0.6),
+        offset: const Offset(0, 2),
+        blurRadius: 2),
   ];
   final textStrong = [
-    Shadow(color: Colors.black.withOpacity(0.6), offset: const Offset(0, 4), blurRadius: 6),
+    Shadow(
+        color: Colors.black.withOpacity(0.6),
+        offset: const Offset(0, 4),
+        blurRadius: 6),
   ];
 }
 
@@ -124,7 +133,7 @@ class _Navigation {
         AppBar(
           leading: IconButton(
             onPressed: () => getIt<AuthCubit>().logOut(),
-            icon: const Icon(MdiIcons.logout),
+            icon: Icon(MdiIcons.logout),
           ),
           title: Text(
             context.t.core.navigation.bottom.features,
@@ -145,14 +154,14 @@ class _Navigation {
 
   List<NavigationDestination> bottomNavigationItems(BuildContext context) => [
         NavigationDestination(
-          icon: const Icon(
+          icon: Icon(
             MdiIcons.fire,
             size: 24,
           ),
           label: context.t.core.navigation.bottom.features,
         ),
         NavigationDestination(
-          icon: const Icon(
+          icon: Icon(
             MdiIcons.information,
             size: 24,
           ),

@@ -43,6 +43,7 @@ class App extends StatelessWidget {
                   SentryNavigatorObserver(),
                 ],
               ),
+
               routeInformationParser: appRouter.defaultRouteParser(),
 
               /// EasyLocalization configuration.

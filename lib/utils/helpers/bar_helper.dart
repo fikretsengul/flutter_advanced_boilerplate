@@ -14,12 +14,14 @@ abstract class BarHelper {
     bool isTest = false,
   }) {
     Bar<void> bar;
-    final message = alert.translatable ? (context.t[alert.message] as String) : alert.message;
+    final message = alert.translatable
+        ? (context.t[alert.message] as String)
+        : alert.message;
 
     if (alert.type == AlertType.constructive) {
       bar = _createAlertModal(
         message: message,
-        iconWidget: const Icon(
+        iconWidget: Icon(
           MdiIcons.checkCircle,
           color: Colors.white,
         ),
@@ -29,7 +31,7 @@ abstract class BarHelper {
     } else if (alert.type == AlertType.destructive) {
       bar = _createAlertModal(
         message: message,
-        iconWidget: const Icon(
+        iconWidget: Icon(
           MdiIcons.alertCircle,
           color: Colors.white,
         ),
@@ -51,7 +53,8 @@ abstract class BarHelper {
           decoration: const BoxDecoration(
             color: Colors.red,
             shape: BoxShape.circle,
-            border: Border.fromBorderSide(BorderSide(color: Colors.white, width: 2)),
+            border: Border.fromBorderSide(
+                BorderSide(color: Colors.white, width: 2)),
           ),
           margin: const EdgeInsets.all(4),
         ),
@@ -102,7 +105,9 @@ abstract class BarHelper {
       shouldIconPulse: false,
       isDismissible: false,
       duration: isTest ? const Duration(seconds: 1) : duration,
-      animationDuration: isTest ? const Duration(milliseconds: 250) : const Duration(seconds: 1),
+      animationDuration: isTest
+          ? const Duration(milliseconds: 250)
+          : const Duration(seconds: 1),
     );
   }
 }

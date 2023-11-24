@@ -7,6 +7,7 @@ import 'package:flutter_advanced_boilerplate/utils/router.gr.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+@RoutePage()
 class AppWrapper extends StatefulWidget {
   const AppWrapper({super.key});
 
@@ -46,10 +47,10 @@ class _AppWrapperState extends State<AppWrapper> with WidgetsBindingObserver {
 
           state.whenOrNull(
             authenticated: (_) {
-              context.router.replaceAll([const AppNavigatorRoute()]);
+              context.router.replaceAll([AppNavigator()]);
             },
             unauthenticated: () {
-              context.router.replaceAll([LoginScreenRoute()]);
+              context.router.replaceAll([LoginScreen()]);
             },
           );
         },

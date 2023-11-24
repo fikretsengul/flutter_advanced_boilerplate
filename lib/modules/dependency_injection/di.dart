@@ -9,4 +9,4 @@ final GetIt getIt = GetIt.instance;
 @InjectableInit(
   ignoreUnregisteredTypes: [TokenStorage<AuthModel>],
 )
-Future<GetIt> configureDependencyInjection() async => $initGetIt(getIt);
+Future<GetIt> configureDependencyInjection() async => getIt.init();

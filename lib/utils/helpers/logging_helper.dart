@@ -21,7 +21,7 @@ class LoggingHelper {
       return;
     }
 
-    logIt.v(message, error, stackTrace);
+    logIt.v(message, error: error, stackTrace: stackTrace);
   }
 
   /// Log a message at level [Level.debug].
@@ -35,7 +35,7 @@ class LoggingHelper {
       return;
     }
 
-    logIt.d(message, error, stackTrace);
+    logIt.d(message, error: error, stackTrace: stackTrace);
   }
 
   /// Log a message at level [Level.info].
@@ -49,7 +49,7 @@ class LoggingHelper {
       return;
     }
 
-    logIt.i(message, error, stackTrace);
+    logIt.i(message, error: error, stackTrace: stackTrace);
   }
 
   /// Log a message at level [Level.warning].
@@ -63,7 +63,7 @@ class LoggingHelper {
       return;
     }
 
-    logIt.w(message, error, stackTrace);
+    logIt.w(message, error: error, stackTrace: stackTrace);
   }
 
   /// Log a message at level [Level.error].
@@ -77,7 +77,7 @@ class LoggingHelper {
       return;
     }
 
-    logIt.e(message, error, stackTrace);
+    logIt.e(message, error: error, stackTrace: stackTrace);
   }
 
   /// Log a message at level [Level.wtf].
@@ -91,6 +91,6 @@ class LoggingHelper {
       return;
     }
 
-    logIt.wtf(message, error, stackTrace);
+    logIt.wtf(message, error: error, stackTrace: stackTrace);
   }
 }

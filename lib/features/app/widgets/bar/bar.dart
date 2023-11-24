@@ -4,7 +4,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
-import 'package:flutter_advanced_boilerplate/features/app/widgets/bar/bar_route.dart' as route;
+import 'package:flutter_advanced_boilerplate/features/app/widgets/bar/bar_route.dart'
+    as route;
 
 const String barRouteName = '/barRoute';
 
@@ -292,7 +293,8 @@ class Bar<T> extends StatefulWidget {
   }
 }
 
-class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStateMixin {
+class _BarState<K extends Object?> extends State<Bar<K>>
+    with TickerProviderStateMixin {
   BarStatus? currentStatus;
 
   GlobalKey? _backgroundBoxKey;
@@ -328,7 +330,8 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
 
     assert(
       widget.userInputForm != null ||
-          ((widget.message != null && widget.message!.isNotEmpty) || widget.messageText != null),
+          ((widget.message != null && widget.message!.isNotEmpty) ||
+              widget.messageText != null),
       'A message is mandatory if you are not using userInputForm. Set either a message or messageText',
     );
 
@@ -361,7 +364,8 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
   }
 
   void _configureProgressIndicatorAnimation() {
-    if (widget.showProgressIndicator && widget.progressIndicatorController != null) {
+    if (widget.showProgressIndicator &&
+        widget.progressIndicatorController != null) {
       _progressAnimation = CurvedAnimation(
         curve: Curves.linear,
         parent: widget.progressIndicatorController!,
@@ -370,7 +374,8 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
   }
 
   void _configurePulseAnimation() {
-    _fadeController = AnimationController(vsync: this, duration: _pulseAnimationDuration);
+    _fadeController =
+        AnimationController(vsync: this, duration: _pulseAnimationDuration);
     _fadeAnimation = Tween(begin: _initialOpacity, end: _finalOpacity).animate(
       CurvedAnimation(
         parent: _fadeController!,
@@ -406,7 +411,7 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
               }
 
               return ClipRRect(
-                borderRadius: widget.borderRadius,
+                borderRadius: widget.borderRadius!,
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
                     sigmaX: widget.barBlur,
@@ -435,14 +440,17 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
   Widget _generateInputBar() {
     return Container(
       key: _backgroundBoxKey,
-      constraints: widget.maxWidth != null ? BoxConstraints(maxWidth: widget.maxWidth!) : null,
+      constraints: widget.maxWidth != null
+          ? BoxConstraints(maxWidth: widget.maxWidth!)
+          : null,
       decoration: BoxDecoration(
         color: widget.backgroundColor,
         gradient: widget.backgroundGradient,
         boxShadow: widget.boxShadows,
         borderRadius: widget.borderRadius,
         border: widget.borderColor != null
-            ? Border.fromBorderSide(BorderSide(color: widget.borderColor!, width: widget.borderWidth))
+            ? Border.fromBorderSide(BorderSide(
+                color: widget.borderColor!, width: widget.borderWidth))
             : null,
       ),
       child: Padding(
@@ -459,14 +467,17 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
   Widget _generateBar() {
     return Container(
       key: _backgroundBoxKey,
-      constraints: widget.maxWidth != null ? BoxConstraints(maxWidth: widget.maxWidth!) : null,
+      constraints: widget.maxWidth != null
+          ? BoxConstraints(maxWidth: widget.maxWidth!)
+          : null,
       decoration: BoxDecoration(
         color: widget.backgroundColor,
         gradient: widget.backgroundGradient,
         boxShadow: widget.boxShadows,
         borderRadius: widget.borderRadius,
         border: widget.borderColor != null
-            ? Border.fromBorderSide(BorderSide(color: widget.borderColor!, width: widget.borderWidth))
+            ? Border.fromBorderSide(BorderSide(
+                color: widget.borderColor!, width: widget.borderWidth))
             : null,
       ),
       child: Column(
@@ -511,7 +522,8 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
   List<Widget> _getAppropriateRowLayout() {
     double buttonRightPadding;
     var iconPadding = 0.0;
-    buttonRightPadding = widget.padding.right - 12 < 0 ? 4 : widget.padding.right - 12;
+    buttonRightPadding =
+        widget.padding.right - 12 < 0 ? 4 : widget.padding.right - 12;
 
     if (widget.padding.left > 16.0) {
       iconPadding = widget.padding.left;
@@ -697,7 +709,8 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
                                   )
                                 : BorderRadius.only(
                                     topRight: widget.borderRadius!.topRight,
-                                    bottomRight: widget.borderRadius!.bottomRight,
+                                    bottomRight:
+                                        widget.borderRadius!.bottomRight,
                                   ),
                         color: widget.leftBarIndicatorColor,
                       ),
@@ -753,7 +766,9 @@ class _BarState<K extends Object?> extends State<Bar<K>> with TickerProviderStat
     return Align(
       heightFactor: 1,
       child: Material(
-        color: widget.barStyle == BarStyle.floating ? Colors.transparent : widget.backgroundColor,
+        color: widget.barStyle == BarStyle.floating
+            ? Colors.transparent
+            : widget.backgroundColor,
         child: SafeArea(
           minimum: widget.barPosition == BarPosition.bottom
               ? EdgeInsets.only(
