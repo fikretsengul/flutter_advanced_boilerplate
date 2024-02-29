@@ -53,7 +53,7 @@ Future<void> main() async {
       );
 
       // This setting smoothes transition color for LinearGradient.
-      Paint.enableDithering = true;
+      // Paint.enableDithering = true;
 
       // Inits sentry for error tracking.
       await initializeSentry();

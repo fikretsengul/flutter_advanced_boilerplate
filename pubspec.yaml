@@ -36,12 +36,12 @@ dependency_overrides:
 dependencies:
   animations: 2.0.7
 
-  auto_route: 7.7.1
+  auto_route: 7.8.4
   auto_size_text: 3.0.0
   custom_sliding_segmented_control: 1.7.5
   data_channel: 2.0.0+1
   dio: 5.3.0
-  dynamic_color: 1.6.6
+  dynamic_color: ^1.6.9
   flutter:
     sdk: flutter
   flutter_bloc: 8.1.3
@@ -60,11 +60,12 @@ dependencies:
   hydrated_bloc: 9.1.2
   image_picker: 1.0.1
   infinite_scroll_pagination: 3.2.0
-  injectable: 2.1.2
+  injectable: 2.3.2
   internet_connection_checker_plus: 2.0.0
   intl: 0.18.1
   json_annotation: 4.8.1
-  json_theme: 6.1.0
+  json_theme: 6.4.1
+  json_theme_annotation: ^1.0.3+3
   keframe: 3.0.0
   logger: 1.4.0
   material_design_icons_flutter: 7.0.7296
@@ -73,7 +74,8 @@ dependencies:
   permission_handler_web: 0.0.2
   pretty_dio_logger: 1.3.1
   reactive_forms: 16.0.2
-  rounded_loading_button: 2.1.0
+  rounded_loading_button:
+    git: https://github.com/scopendo/flutter_rounded_loading_button.git
   sentry_dart_plugin: 1.5.0
   sentry_dio: 7.8.0
   sentry_flutter: 7.8.0
@@ -88,21 +90,22 @@ dependencies:
   web_socket_channel: 2.4.0
 
 dev_dependencies:
-  artemis: 7.13.0-beta.2
+  analyzer: ^5.13.0
+  artemis: 7.13.1
 
   # The "very_good_analysis & dart_code_metrics" package below contains a set of
   # recommended encourage good coding practices. The lint set provided by the package is
   # lints to activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  auto_route_generator: 7.2.0
+  auto_route_generator: 7.3.2
   bloc_test: 9.1.3
   build_runner: 2.4.6
   flutter_test:
     sdk: flutter
-  freezed: 2.4.1
+  freezed: 2.4.7
   golden_toolkit: 0.15.0
-  injectable_generator: 2.1.6
+  injectable_generator: 2.4.1
   json_serializable: 6.7.1
   mocktail: 0.3.0
   mocktail_image_network: 0.3.1
